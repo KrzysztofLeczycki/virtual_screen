@@ -1,0 +1,14 @@
+.container{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 1px;
+  width: 104px;
+}
+
+.pixel{
+  width: 20px;
+  height: 20px;
+  background-color:navy;
+}
+
