@@ -26,18 +26,7 @@ const matrix =[
 	['Y', [1, 5, 6, 10, 11, 15, 17, 19, 23, 28, 33]],
 	['Z', [1, 2, 3, 4, 5, 10, 14, 18, 22, 26, 31, 32, 33, 34, 35]]
 ];
-/*
-const newLetter = document.querySelector('input');
 
-const display = document.querySelector('button');
-display.onclick = function(){
-	let letter = newLetter.value;
-	let abc = toUpperCase(letter);
-	alert(letter);
-}
-*/
-
-//const letter = 'Z';
 const input = document.getElementById('letter');
 const display = document.querySelector('button');
 
@@ -62,7 +51,7 @@ function resetScr(){
 
 display.addEventListener('click', () => {
 	resetScr();
-	const letter = input.value;
+	const letter = input.value.toUpperCase();
 	lightOn(letter);
 	input.value = '';
 });
