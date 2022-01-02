@@ -49,9 +49,24 @@ function resetScr(){
 	}
 }
 
+function stringLightOn(str){
+	const singleLetter = n => {
+		if(n < str.length){
+			resetScr();
+			lightOn(str[n]), 1000;
+			n++;
+			setTimeout(function(){singleLetter(n++);}, 1500);
+		}
+	}
+	singleLetter(0);
+}
+
 display.addEventListener('click', () => {
 	resetScr();
 	const letter = input.value.toUpperCase();
-	lightOn(letter);
+	stringLightOn(letter);
 	input.value = '';
 });
+
+
+
